@@ -14,7 +14,7 @@ const Step2 = () => {
       <h2 className='text-center font-bold text-3xl text-green-600'>Your Previous Job Experience</h2>
       <p className='text-base leading-6 text-center text-gray-600 mb-6'>please put about your information!</p>
       <p className='text-base leading-6 text-black mb-2'>Company Name</p>
-      <input type="text" name="" id="" onChange={handleChange} className='w-full rounded-md p-4 placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6' placeholder='company name'/>
+      <input type="text" name="text" id="" value={userData['text'] || ''} onChange={handleChange} className='w-full rounded-md p-4 placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6' placeholder='company name'/>
       <div className='w-full flex flex-col lg:flex-row items-start lg:items-center gap-6 mb-6'>
         <div>
         <p className='text-base leading-6 text-black mb-2'>Started Date</p>
@@ -26,14 +26,14 @@ const Step2 = () => {
         </div>
       </div>
       <div className='w-full flex items-center gap-6'>
-       <select className='w-full rounded-md p-4 bg-white placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6'>
+       <select onChange={handleChange} className='w-full rounded-md p-4 bg-white placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6'>
         <option value="">Current Salary</option>
         <option value="15k">15k</option>
         <option value="30k">30k</option>
         <option value="50k">50k</option>
         <option value="75k">75k</option>
        </select>
-       <select className='w-full rounded-md p-4  bg-white placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6'>
+       <select onChange={handleChange} className='w-full rounded-md p-4  bg-white placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6'>
         <option value="">Current Salary</option>
         <option value="15k">15k</option>
         <option value="30k">30k</option>
@@ -42,7 +42,7 @@ const Step2 = () => {
        </select>
       </div>
       <p className='text-base leading-6 text-black mb-2'>Reason of leave</p>
-      <textarea name="" id="" cols="30" rows="10" className='w-full resize-none rounded-md p-4 placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6' placeholder='message...!'></textarea>
+      <textarea name="message" id="" cols="30" rows="10" className='w-full resize-none rounded-md p-4 placeholder:text-gray-400 text-green-600 outline-none focus:outline-green-600 mb-6' placeholder='message...!' value={userData['message'] || ''}></textarea>
     </div>
   )
 }

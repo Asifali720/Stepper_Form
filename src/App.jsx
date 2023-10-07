@@ -38,7 +38,7 @@ const handleOnClick = (direction) =>{
 }
   return (
     <div className='w-full max-w-[1200px] mx-auto rounded-2xl shadow-2xl lg:p-8 mt-20'>
-      <form action='#' name='stepper form' netlify>
+      
 
      
       <div>
@@ -60,7 +60,6 @@ const handleOnClick = (direction) =>{
       }
      
     </div>
-    </form>
     </div>
   )
 }
